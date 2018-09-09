@@ -8,7 +8,7 @@ class LoginScreen extends StatefulWidget {
 }
 String loginId='',password='';
 class LoginScreenState extends State<LoginScreen> {
- final formKey=GlobalKey<FormState>();
+  final formKey=GlobalKey<FormState>();
   Widget build(context) {
     return Container(
         margin: EdgeInsets.all(20.0),
