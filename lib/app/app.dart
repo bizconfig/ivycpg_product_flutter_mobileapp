@@ -5,9 +5,7 @@ class App extends StatelessWidget{
   Widget build(context){
     return MaterialApp(
       title:'Login Me In',
-      home:Scaffold(
-        body:LoginScreen(),
-      ),
+      home:LoginScreen()
     );
   }
 }

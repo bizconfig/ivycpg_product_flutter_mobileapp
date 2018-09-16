@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import '../models/control.dart';
 
-Widget ivyMaterializeTextbox(String labelText, String valueKey,{String hintText = '',bool isPassword = false,TextInputType keybordInputType = TextInputType.text}) {
+Widget ivyMaterializeTextbox(String labelText, TextEditingController _controllerName,{String hintText = '',bool isPassword = false,TextInputType keybordInputType = TextInputType.text}) {
   return TextFormField(
+    controller: _controllerName,
     keyboardType: keybordInputType,
     obscureText: isPassword,
     decoration: InputDecoration(labelText: labelText, hintText: hintText),
@@ -11,9 +12,6 @@ Widget ivyMaterializeTextbox(String labelText, String valueKey,{String hintText 
       {
         return 'Please Enter Value';
       }
-    },
-    onSaved: (String value){
-      valueKey=value;
     },
   );
 }
